@@ -1,0 +1,17 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t=gcr.io/ucaldas-cloud-computing/${_IMG_NAME}:v${_IMG_VERS}
+      - .
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t=gcr.io/ucaldas-cloud-computing/${_IMG_NAME}:latest
+      - .
+substitutions:
+  _IMG_NAME: imagedavid-lab2
+  _IMG_VERS: "0.1"
+images:
+  - gcr.io/ucaldas-cloud-computing/${_IMG_NAME}:v${_IMG_VERS}
+  - gcr.io/ucaldas-cloud-computing/${_IMG_NAME}:latest
