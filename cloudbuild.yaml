@@ -10,7 +10,7 @@ steps:
       - -t=gcr.io/ucaldas-cloud-computing/${_IMG_NAME}:latest
       - .
 substitutions:
-  _IMG_NAME: imagedavid-lab2en el repo de david
+  _IMG_NAME: imagedavid-lab2en_el_repo_de_david
   _IMG_VERS: "0.1"
 images:
   - gcr.io/ucaldas-cloud-computing/${_IMG_NAME}:v${_IMG_VERS}
